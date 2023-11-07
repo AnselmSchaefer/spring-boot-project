@@ -15,5 +15,6 @@ public class InitialFillOfDatabase implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         personService.saveUpdatePerson(new Person(0L, "first_name", "last_name"));
+        personService.saveUpdatePerson(new Person(1L, "Etienne", "Hector"));
     }
 }
