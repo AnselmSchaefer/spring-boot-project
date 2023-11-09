@@ -38,4 +38,9 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      sh "docker stop spring-boot-test"
+    }
+  }
 }
