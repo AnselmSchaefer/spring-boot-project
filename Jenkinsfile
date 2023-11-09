@@ -18,7 +18,7 @@ pipeline {
     }
     stage("Build Docker Image") {
       steps {
-        sh "docker build -t anselm/spring-boot-test:latest ."
+        sh "docker build -t anselmschaefer/spring-boot-test:latest ."
       }
     }
     stage("Docker push") {
