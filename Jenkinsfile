@@ -11,5 +11,15 @@ pipeline {
         sh "mvn test"
       }
     }
+    stage("Build JAR") {
+      steps {
+        sh "mvn package"
+      }
+    }
+    stage("Build Docker Image") {
+      steps {
+        sh "docker build -t anselm/spring-boot-test:latest ."
+      }
+    }
   }
 }
