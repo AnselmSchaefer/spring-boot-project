@@ -21,5 +21,10 @@ pipeline {
         sh "docker build -t anselm/spring-boot-test:latest ."
       }
     }
+    stage("Docker push") {
+      steps {
+        sh "docker push anselmschaefer/spring-boot-test"
+      }
+    }
   }
 }
